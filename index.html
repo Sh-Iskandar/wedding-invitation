@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Бурхониддин &amp; Мухибахон — Свадебное приглашение</title>
+  <meta name="description" content="Приглашаем вас на нашу свадьбу 15 июля 2026" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ====== ЗАСТАВКА ====== -->
+  <div id="intro-gate" class="intro-gate">
+    <span class="save-label">Save the date</span>
+    <p class="intro-initials"><span class="accent">М</span> <span class="amp">&amp;</span> <span class="accent">Б</span></p>
+    <p class="intro-names">Бурхониддин &amp; Мухибахон</p>
+  </div>
+
+  <div id="intro-playing" class="intro-playing hidden">
+    <div class="ring ring-1"></div>
+    <div class="ring ring-2"></div>
+    <div class="intro-center">
+      <span class="save-label">Save the date</span>
+      <p class="big-initials"><span class="accent fade-1">М</span><span class="amp">&amp;</span><span class="accent fade-2">Б</span></p>
+      <span class="intro-names fade-3">Бурхониддин &amp; Мухибахон</span>
+    </div>
+  </div>
+
+  <!-- Кнопка звука -->
+  <button id="mute-btn" class="mute-btn hidden" aria-label="Выключить звук">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+  </button>
+
+  <!-- ====== ПРИГЛАШЕНИЕ ====== -->
+  <main>
+    <article class="card">
+      <header class="hero">
+        <p class="section-label">Save the date</p>
+        <p class="mono-initials"><span class="accent">Б</span> <span class="ink">&amp;</span> <span class="accent">М</span></p>
+        <p class="invite-intro">Мы приглашаем вас на нашу свадьбу</p>
+        <h1 class="couple-names">Бурхониддин<span class="accent amp-lg">&amp;</span><br>Мухибахон</h1>
+        <img src="assets/floral-hero.jpg" alt="Свадебный букет" class="floral" />
+        <p class="date-big">15 июля 2026</p>
+        <p class="date-small">Среда · 19:00</p>
+      </header>
+
+      <div class="divider"><span></span><img src="assets/sprig.png" alt="" class="sprig"><span></span></div>
+
+      <section class="text-center px-lg">
+        <p class="section-label">Дорогие гости</p>
+        <p class="serif-para">В этот особенный для нас день мы хотим, чтобы рядом были самые близкие и любимые люди. Будем счастливы разделить с вами радость нашего торжества.</p>
+      </section>
+
+      <div class="divider"><span></span><img src="assets/sprig.png" alt="" class="sprig"><span></span></div>
+
+      <section class="text-center px">
+        <p class="section-label">До нашего дня</p>
+        <div id="countdown" class="countdown">
+          <div class="cd-item"><span class="cd-value" data-unit="d">00</span><span class="cd-label">дней</span></div>
+          <div class="cd-item"><span class="cd-value" data-unit="h">00</span><span class="cd-label">часов</span></div>
+          <div class="cd-item"><span class="cd-value" data-unit="m">00</span><span class="cd-label">минут</span></div>
+          <div class="cd-item"><span class="cd-value" data-unit="s">00</span><span class="cd-label">секунд</span></div>
+        </div>
+      </section>
+
+      <div class="divider"><span></span><img src="assets/sprig.png" alt="" class="sprig"><span></span></div>
+
+      <section class="px-lg text-center info-grid">
+        <div>
+          <p class="section-label">Когда</p>
+          <p class="info-title">15 июля 2026</p>
+          <p class="info-sub">Начало в 19:00</p>
+        </div>
+        <div>
+          <p class="section-label">Где</p>
+          <p class="info-title">Ресторан «Муроду Максад»</p>
+        </div>
+      </section>
+
+      <div class="divider"><span></span><img src="assets/sprig.png" alt="" class="sprig"><span></span></div>
+
+      <section class="px-lg text-center">
+        <p class="section-label">Дресс-код</p>
+        <p class="info-title">Классический</p>
+        <p class="info-sub">Будем рады видеть вас в элегантных нарядах</p>
+        <div class="palette">
+          <span style="background:#3a2e25"></span>
+          <span style="background:#8a6a4a"></span>
+          <span style="background:#c9a87a"></span>
+          <span style="background:#e8d9c0"></span>
+          <span style="background:#f5ecde"></span>
+        </div>
+      </section>
+
+      <div class="divider"><span></span><img src="assets/sprig.png" alt="" class="sprig"><span></span></div>
+
+      <section class="px-lg text-center">
+        <p class="section-label">Подтверждение</p>
+        <p class="serif-italic">Просим подтвердить ваше присутствие</p>
+        <p class="info-sub">Для подтверждения присутствия</p>
+        <a href="tel:+992983350707" class="phone">+992 98 335 07 07</a>
+        <p class="info-tiny">до 1 июля 2026</p>
+      </section>
+
+      <div class="divider"><span></span><img src="assets/sprig.png" alt="" class="sprig"><span></span></div>
+
+      <footer class="px-lg text-center pb">
+        <p class="serif-italic muted">С любовью,</p>
+        <p class="signature">Бурхониддин &amp; Мухибахон</p>
+        <button id="share-btn" class="share-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          <span id="share-text">Поделиться приглашением</span>
+        </button>
+      </footer>
+    </article>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <audio id="bg-music" src="assets/wedding-music.mp3" loop playsinline preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>

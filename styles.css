@@ -1,0 +1,206 @@
+/* ====== ДИЗАЙН-ТОКЕНЫ (меняйте здесь для смены цветов) ====== */
+:root {
+  --background: hsl(36, 33%, 96%);
+  --cream: hsl(36, 45%, 94%);
+  --card: hsl(36, 40%, 98%);
+  --ink: hsl(25, 30%, 20%);
+  --muted: hsl(28, 12%, 42%);
+  --accent: hsl(38, 45%, 55%);
+  --gold: hsl(38, 48%, 52%);
+  --gold-soft: hsl(38, 35%, 72%);
+  --shadow-soft: 0 10px 40px -10px hsla(30, 30%, 30%, 0.15);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { min-height: 100%; }
+
+body {
+  background: var(--background);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.serif, .font-serif, h1, .couple-names, .signature, .info-title, .date-big, .phone, .cd-value, .mono-initials, .big-initials, .intro-initials, .serif-para, .serif-italic {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.hidden { display: none !important; }
+
+/* ====== ЗАСТАВКА ====== */
+.intro-gate, .intro-playing {
+  position: fixed; inset: 0; z-index: 50;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 0 1.5rem; text-align: center;
+  background: radial-gradient(ellipse at center, var(--cream) 0%, var(--background) 60%, hsla(25,30%,20%,0.15) 100%);
+}
+
+.intro-playing { transition: opacity 1.2s ease; }
+.intro-playing.fading { opacity: 0; pointer-events: none; }
+
+.save-label {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.4em;
+  color: var(--accent); margin-bottom: 1.5rem;
+}
+
+.intro-initials {
+  font-style: italic; font-size: clamp(4rem, 18vw, 9rem); line-height: 1;
+  color: var(--accent); animation: scaleIn 0.7s ease both;
+}
+.intro-initials .amp { color: hsla(25,30%,20%,0.7); }
+
+.intro-names { margin-top: 1.5rem; font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--muted); animation: fadeIn 1s ease both; }
+
+.open-btn {
+  margin-top: 3rem; border: 1px solid var(--gold); background: var(--ink);
+  color: var(--cream); padding: 1rem 2.5rem; border-radius: 999px;
+  font-family: 'Cormorant Garamond', serif; text-transform: uppercase;
+  letter-spacing: 0.3em; font-size: 1rem; cursor: pointer;
+  box-shadow: var(--shadow-soft); transition: transform 0.2s;
+  animation: fadeIn 1s ease both;
+}
+.open-btn:hover { transform: scale(1.05); }
+
+.music-hint {
+  margin-top: 1rem; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 0.3em; color: var(--muted);
+}
+
+.ring { position: absolute; left: 50%; top: 50%; border-radius: 999px; transform: translate(-50%, -50%); }
+.ring-1 { width: 120vmin; height: 120vmin; border: 1px solid hsla(38,35%,72%,0.3); animation: pulse 2s ease-in-out infinite; }
+.ring-2 { width: 80vmin; height: 80vmin; border: 1px solid hsla(38,48%,52%,0.2); }
+
+.intro-center { position: relative; text-align: center; animation: scaleIn 0.7s ease both; }
+.big-initials {
+  font-style: italic; font-size: clamp(6rem, 28vw, 14rem);
+  line-height: 1; color: var(--ink);
+}
+.big-initials .amp { margin: 0 1rem; color: hsla(25,30%,20%,0.7); }
+.fade-1 { animation: fadeIn 0.8s ease both; }
+.fade-2 { animation: fadeIn 0.8s ease 0.4s both; }
+.fade-3 { animation: fadeIn 0.8s ease 1s both; display: block; margin-top: 2rem; }
+
+.accent { color: var(--accent); }
+.ink { color: var(--ink); }
+
+.mute-btn {
+  position: fixed; bottom: 1.25rem; right: 1.25rem; z-index: 60;
+  width: 3rem; height: 3rem; border-radius: 999px;
+  border: 1px solid var(--gold-soft); background: hsla(36,45%,94%,0.9);
+  color: var(--ink); display: flex; align-items: center; justify-content: center;
+  cursor: pointer; box-shadow: var(--shadow-soft); backdrop-filter: blur(6px);
+  transition: transform 0.2s;
+}
+.mute-btn:hover { transform: scale(1.05); }
+
+/* ====== КАРТОЧКА ПРИГЛАШЕНИЯ ====== */
+main { padding: 0; }
+.card {
+  max-width: 28rem; margin: 0 auto; background: var(--cream);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero { position: relative; padding: 2.5rem 1.5rem 0; text-align: center; overflow: hidden; }
+
+.section-label {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.35em;
+  color: var(--accent);
+}
+
+.mono-initials {
+  margin-top: 1.5rem; font-style: italic; font-size: 3.75rem;
+  color: var(--accent);
+}
+.mono-initials .ink { color: var(--ink); }
+
+.invite-intro { margin-top: 1.5rem; font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--muted); }
+
+.couple-names {
+  margin-top: 1rem; font-size: 3rem; line-height: 1.05; color: var(--ink);
+  font-weight: 400;
+}
+.couple-names .amp-lg { margin: 0 0.5rem; font-style: italic; color: var(--accent); }
+
+.floral { display: block; margin: 1.5rem auto 0; width: 100%; max-width: 20rem; height: auto; }
+
+.date-big { margin-top: -1rem; font-size: 1.5rem; color: var(--ink); }
+.date-small {
+  margin-top: 0.25rem; font-size: 0.75rem; text-transform: uppercase;
+  letter-spacing: 0.3em; color: var(--muted);
+}
+
+/* ====== РАЗДЕЛИТЕЛЬ ====== */
+.divider { display: flex; align-items: center; justify-content: center; gap: 1rem; margin: 2.5rem 0; }
+.divider span { height: 1px; width: 4rem; background: var(--gold-soft); }
+.sprig { width: 2rem; height: 2rem; opacity: 0.8; }
+
+/* ====== СЕКЦИИ ====== */
+.text-center { text-align: center; }
+.px { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px-lg { padding-left: 2rem; padding-right: 2rem; }
+.pb { padding-bottom: 3rem; }
+
+.serif-para { margin-top: 1.5rem; font-size: 1.125rem; line-height: 1.7; color: var(--ink); }
+.serif-italic { margin-top: 1rem; font-style: italic; font-size: 1.125rem; color: var(--ink); }
+.muted { color: var(--muted); }
+
+.info-grid { display: grid; gap: 2rem; grid-template-columns: 1fr; }
+.info-title { margin-top: 1rem; font-size: 1.875rem; color: var(--ink); }
+.info-sub { margin-top: 0.5rem; font-size: 0.875rem; color: var(--muted); letter-spacing: 0.02em; }
+.info-tiny { margin-top: 0.75rem; font-size: 0.75rem; color: var(--muted); }
+
+/* ====== ОБРАТНЫЙ ОТСЧЁТ ====== */
+.countdown { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-top: 1.5rem; }
+.cd-item {
+  display: flex; flex-direction: column; align-items: center;
+  border: 1px solid hsla(38,35%,72%,0.4); background: hsla(36,40%,98%,0.6);
+  padding: 1rem 0.5rem; border-radius: 0.5rem; backdrop-filter: blur(4px);
+}
+.cd-value { font-size: 1.875rem; color: var(--ink); font-variant-numeric: tabular-nums; }
+.cd-label {
+  margin-top: 0.25rem; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 0.2em; color: var(--muted);
+}
+
+/* ====== ПАЛИТРА ====== */
+.palette { display: flex; justify-content: center; gap: 0.75rem; margin-top: 1.5rem; }
+.palette span {
+  display: block; width: 1.5rem; height: 1.5rem; border-radius: 999px;
+  border: 1px solid hsla(38,35%,72%,0.6);
+}
+
+/* ====== КОНТАКТЫ / КНОПКА ====== */
+.phone {
+  display: inline-block; margin-top: 0.75rem; font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem; color: var(--ink); text-decoration: underline;
+  text-decoration-color: var(--gold); text-underline-offset: 4px;
+}
+
+.signature { margin-top: 0.5rem; font-size: 1.5rem; color: var(--ink); }
+
+.share-btn {
+  margin-top: 2rem; display: inline-flex; align-items: center; gap: 0.5rem;
+  border: 1px solid var(--gold); background: var(--ink); color: var(--cream);
+  padding: 0.75rem 1.5rem; border-radius: 999px;
+  font-family: 'Cormorant Garamond', serif; text-transform: uppercase;
+  letter-spacing: 0.25em; font-size: 0.875rem; cursor: pointer;
+  box-shadow: var(--shadow-soft); transition: transform 0.2s;
+}
+.share-btn:hover { transform: scale(1.05); }
+
+/* ====== TOAST ====== */
+.toast {
+  position: fixed; bottom: 5rem; left: 50%; transform: translateX(-50%) translateY(20px);
+  background: var(--ink); color: var(--cream);
+  padding: 0.75rem 1.25rem; border-radius: 0.5rem;
+  box-shadow: var(--shadow-soft); opacity: 0; pointer-events: none;
+  transition: all 0.3s ease; z-index: 70; font-size: 0.875rem;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* ====== АНИМАЦИИ ====== */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes scaleIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
